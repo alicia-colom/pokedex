@@ -1,20 +1,23 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
+import React, { Component } from 'react';
 import Pokemon from './Pokemon';
 import '../stylesheets/PokeList.scss';
+// import pokedex from '../data/pokedex.json';
 
-const PokeList = () => {
-	const [age, setOlder] = useState(20);
-	function getOlder() {
-		setOlder(age + 1);
+class PokeList extends Component {
+	render() {
+		const pokemons = this.props.pokedex.map((pokemon) => (
+			<li className="pokeItem" key={pokemon.id}>
+				<Pokemon pokemon={pokemon} />
+			</li>
+		));
+
+		return (
+			<>
+				<ul className="pokeList">{pokemons}</ul>
+			</>
+		);
 	}
-	return (
-		<>
-			<div className="pokeList"></div>
-
-			<Pokemon />
-			<Pokemon />
-		</>
-	);
-};
+}
 
 export default PokeList;
