@@ -1,13 +1,18 @@
 .pokeList {
-  // width: 100%;
+	// width: 100%;
 	list-style: none;
 	display: flex;
   flex-wrap: wrap;
-  padding-bottom: 50px;
+  justify-content: center;
+	padding: 0;
 }
 
 .pokeItem {
-	width: 180px;
-	background-color: #fefefe;
+  width: 150px;
+  	background-color: #fefefe;
 	text-align: center;
+	border-radius: 10px;
+	margin: 5px;
+	padding: 20px;
+	color: #323232;
 }

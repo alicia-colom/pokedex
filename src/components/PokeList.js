@@ -1,22 +1,17 @@
-// import React, { useState } from 'react';
 import React, { Component } from 'react';
 import Pokemon from './Pokemon';
 import '../stylesheets/PokeList.scss';
-// import pokedex from '../data/pokedex.json';
 
 class PokeList extends Component {
 	render() {
-		const pokemons = this.props.pokedex.map((pokemon) => (
-			<li className="pokeItem" key={pokemon.id}>
-				<Pokemon pokemon={pokemon} />
+		console.log(this.props.list);
+		const pokemons = this.props.list.map((eachItem) => (
+			<li className="pokeItem" key={eachItem.id}>
+				<Pokemon pokemon={eachItem} />
 			</li>
 		));
 
-		return (
-			<>
-				<ul className="pokeList">{pokemons}</ul>
-			</>
-		);
+		return <ul className="pokeList">{pokemons}</ul>;
 	}
 }
 

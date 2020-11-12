@@ -1,0 +1,26 @@
+.name {
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.image {
+	background-color: #efefef;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.text {
+	display: flex;
+	justify-content: space-between;
+  font-size: 12px;
+
+	&__type {
+		text-transform: capitalize;
+	}
+
+	&__evolution {
+		text-transform: uppercase;
+	}
+}
