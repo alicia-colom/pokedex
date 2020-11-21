@@ -1,26 +1,39 @@
 .name {
-  text-transform: uppercase;
-  margin: 0;
-  font-size: 20px;
-  padding-bottom: 10px;
+	text-transform: uppercase;
+	margin: 0;
+	font-size: 20px;
+	padding-bottom: 10px;
+
 }
 
 .image {
 	background-color: #efefef;
-  width: 100%;
-  border-radius: 10px;
+	width: 100%;
+	border-radius: 10px;
+
 }
 
-.text {
+.description {
 	display: flex;
-	justify-content: space-between;
-  font-size: 12px;
+	flex-direction: column;
+	font-size: 12px;
 
 	&__type {
+		display: flex;
+		justify-content: space-evenly;
 		text-transform: capitalize;
-	}
+		list-style-type: none;
+		padding: 8px 0;
 
+		&--item {
+		}
+	}
 	&__evolution {
 		text-transform: uppercase;
+	&--img {
+		width: 45px;
+		border: 2px solid #EFEFEF;
+		border-radius: 50%;
+	}
 	}
 }

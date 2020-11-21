@@ -1,18 +1,20 @@
-import React, { Component } from 'react';
-import Pokemon from './Pokemon';
 import '../stylesheets/PokeList.scss';
+import Pokemon from './Pokemon';
 
-class PokeList extends Component {
-	render() {
-		console.log(this.props.list);
-		const pokemons = this.props.list.map((eachItem) => (
+const PokeList = (props) => {
+	const pokemons = props.list.map((eachItem) => {
+		const evolutedOf = props.list.find(
+			(each) => eachItem.evolution === each.name
+		);
+
+		return (
 			<li className="pokeItem" key={eachItem.id}>
-				<Pokemon pokemon={eachItem} />
+				<Pokemon pokemon={eachItem} mother={evolutedOf} />
 			</li>
-		));
+		);
+	});
 
-		return <ul className="pokeList">{pokemons}</ul>;
-	}
-}
+	return <ul className="pokeList">{pokemons}</ul>;
+};
 
 export default PokeList;
